@@ -30,7 +30,7 @@
           <a href="#"> <li  class = "nav-item">Our Recipes</li></a> 
           <a href="#"> <li  class = "nav-item">Party Recipes</li></a> 
           <a href="#"> <li  class = "nav-item">Blog</li></a> 
-          <a href="#"> <li  class = "nav-item">Add Recipes</li></a> 
+          <a href="/recipes/new"> <li  class = "nav-item">Add Recipes</li></a> 
         </ul>
         </div>
     </nav>
@@ -75,31 +75,16 @@
 
     <h1 style="text-align: center;padding-top: 25px;font-size: 60px;"><span style="color: #fcc203;">Online</span> recipes</h1>
     <div class = "row" style="padding-top: 25px; margin-bottom: 40px;">
-
-        <div class = "col-lg-3 col-md-6 col-sm-12">
-            <img style="border-radius: 30%;width: 100%;" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-            <p style="padding-top: 10px;margin-left: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et. Ut enim ad</p>
-            <button style="margin: auto;margin-bottom: 15px; display: block; width: 100px;background: black;color: white; font-family:Merienda;">More</button>
-        </div>
-
-        <div class = "col-lg-3 col-md-6 col-sm-12">
-            <img style="border-radius: 30%;width: 100%;" src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-            <p style="padding-top: 10px;margin-left: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et. Ut enim ad</p>
-            <button style="margin: auto;margin-bottom: 15px; display: block; width: 100px; background: black;color: white; font-family:Merienda;">More</button>
-        </div>
-
-        <div class = "col-lg-3 col-md-6 col-sm-12">
-            <img style="border-radius: 30%;width: 100%;" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-            <p style="padding-top: 10px;margin-left: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et. Ut enim ad</p>
-            <button style="margin: auto;margin-bottom: 15px; display: block; width: 100px; background: black;color: white; font-family:Merienda;">More</button>
-        </div>
-
-        <div class = "col-lg-3 col-md-6 col-sm-12">
-            <img style="border-radius: 30%;width: 100%;" src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-            <p style="padding-top: 10px;margin-left: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et. Ut enim ad</p>
-            <button style="margin: auto; display: block; width: 100px; background: black;color: white; font-family:Merienda;">More</button>
-        </div>
-
+<div class = "row" style="padding-top: 25px; margin-bottom: 40px;">
+ <% recipes.forEach(function(recipe){ %>
+		<div class = "col-lg-3 col-md-6 col-sm-12">
+		<h1><%=recipe.title %></h1>
+		<img style = "width:200px;border-radius:30%" src = "<%=recipe.image%>">
+		<p><%=recipe.body%></p>
+			  <button style="margin: auto;margin-bottom: 15px; display: block; width: 100px;background: black;color: white; font-family:Merienda;">More</button>
+		 </div>
+			<% }); %>
+	</div>
     </div> 
     <hr>
         <div class="row" style="padding-top:20px; margin-bottom: 40px;">
