@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+<h1>
+	<%= foundRecipe.title %>
+</h1>
+<img src = "<%=foundRecipe.image%>">
+<p><%=foundRecipe.created.toDateString() %></p>
+<p><%= foundRecipe.body %></p>
+<a class = "edit" href = "/recipes/<%=foundRecipe._id%>/edit"><button  style="width:70px;">Edit</button></a>
+
+<form action="/recipes/<%=foundRecipe._id%>?_method=DELETE" method="POST">
+	<button class = "edit">Delete</button>
+</form>
+
+
+

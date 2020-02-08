@@ -9,6 +9,10 @@
    
 }
 
+.edit{
+	float:left;
+	width:80px;
+}
 li{
     margin-right: 30px;
     font-size: 20px;

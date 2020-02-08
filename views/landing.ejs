@@ -81,7 +81,7 @@
 		<h1><%=recipe.title %></h1>
 		<img style = "width:200px;border-radius:30%" src = "<%=recipe.image%>">
 		<p><%=recipe.body%></p>
-			  <button style="margin: auto;margin-bottom: 15px; display: block; width: 100px;background: black;color: white; font-family:Merienda;">More</button>
+			  <a href = "/recipes/<%=recipe._id%>"><button style="margin: auto;margin-bottom: 15px; display: block; width: 100px;background: black;color: white; font-family:Merienda;">More</button></a>
 		 </div>
 			<% }); %>
 	</div>
