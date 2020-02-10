@@ -4,7 +4,7 @@ var mongoose     = require("mongoose");
 var bodyParser   = require("body-parser");
 var methodOverride = require("method-override");
 
-mongoose.connect("mongodb://localhost/recipes_db", {useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect("mongodb://localhost/recipes_dbnew", {useNewUrlParser:true,useUnifiedTopology:true});
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -17,6 +17,8 @@ var recipeSchema = new mongoose.Schema({
 	title: String,
 	image: String,
 	body : String,
+	ingredients:String,
+	procedure:String,
 	created: {type:Date, default:Date.now}
 });
 
