@@ -5,8 +5,10 @@
     font-weight: bolder;
 }
 .navbar-nav{
-    margin-left: 220px;
-   
+    margin-left: 220px;	
+}
+a{
+	color:#2d2e27;
 }
 
 .edit{
@@ -88,22 +90,104 @@ button{
     }
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("https://colorlib.com/preview/theme/delicious/img/bg-img/bg4.jpg");
+ 
+@media screen and (max-width: 500px) {
+    .col-sm-12 {
+   margin-left:0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .showimage {
+		
+ 	width:250px;
+	border-radius:10%;
+		
+		
+    }
+}
+@media screen and (max-width: 500px) {
+    .jumbotron{
+	margin-left:0px;
+		background-color: white;
+    }
+}
+@media screen and (min-width: 500px) {
+    .jumbotron{
+	background-color:white;
+		margin-left:110px;
+    }
+}
 
-    /* Set a specific height */
-    height: 550px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
+@media screen and (min-width: 500px) {
+    .showimage {
+		width:90%;
+		border-radius:10%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+	input{
+		border-radius:25px;
+		border: 2px solid #fcc203;
+		padding: 15px; 
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	input{
+		border-radius:25px;
+		border: 2px solid #fcc203;
+		padding: 20px; 
+		width: 250px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.less{
+	
+		margin-bottom: 15px;
+		width: 100px;
+		background: black;
+		color: white;
+		font-family:Merienda;
+		margin-left:120px;
+	}
+}
+@media screen and (min-width: 500px) {
+	.less{
+		margin:auto;
+		margin-bottom: 15px;
+		display: block;
+		width: 100px;
+		background: black;
+		color: white;
+		font-family:Merienda;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.landingimage{
+		width:200px;
+		border-radius:30%
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.landingimage{
+		width:200px;
+		border-radius:30%;
+			margin-left:70px;
+	}
+}
 .checked{
 	color:yellow;
 }
+
+@media screen and (max-width: 500px) {
+	.landingtitle{
+		margin-left:30px;
+	}
+}
+	
   
- 

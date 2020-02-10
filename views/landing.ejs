@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Recipes Anywhere</title>
-        <link rel="stylesheet" type="text/css" href="/main.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Italianno&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    </head>
-    <body>
-        <section class = "container">
-       <nav class = "navbar navbar-expand-lg navbar-light bg-transparent" style="text-align: center;   border-top-left-radius: 20% 50%;   border-top-right-radius: 20% 50%; font-family:italianno ;">
-           <a  class = "navbar-brand" href="#"><span style="color: #fcc203;">Recipe</span> Anywhere</a> 
-       </nav>
-       <hr style="padding: 0; margin: 0;">
-
-       <nav class = "navbar navbar-expand-md navbar-light bg-transparent" style="text-align: center;font-family: merienda; margin-bottom: 15px;">
-       
-        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-            class="fa fa-bars fa-1x"></i></span></button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-        <ul class = "navbar-nav">
-          <a href="#"> <li  class = "nav-item">Home</li></a> 
-          <a href="#"> <li  class = "nav-item">About Us</li></a> 
-          <a href="#"> <li  class = "nav-item">Our Recipes</li></a> 
-          <a href="#"> <li  class = "nav-item">Party Recipes</li></a> 
-          <a href="#"> <li  class = "nav-item">Blog</li></a> 
-          <a href="/recipes/new"> <li  class = "nav-item">Add Recipes</li></a> 
-        </ul>
-        </div>
-    </nav>
+<%- include("partials/header") %>
  
  <div class="container">
    <div class  = "container" style="padding: 0; background-color:#fcc203;">
@@ -63,7 +28,7 @@
             </div>
             <div style="background-color:#fcc203;" class = "col-lg-3 col-md-6 col-sm-12">
                <h2 style="text-align: center;padding-top: 60px; font-size: 60px;color: white; font-family: italianno;">Welcome!</h2>
-               <p style="color:white; font-size: 20px;padding-top: 10px;text-align: center; " >The main mission for our website is to provide the recipes of various dishes around in one place to solve your cooking needs on your phones and laptopns with the help of our website</p>
+               <p style="color:white; font-size: 20px;padding-top: 10px;text-align: center; " >The main mission for our website is to provide the recipes of various dishes around the world in one place to solve your cooking needs on your phones and laptops with the help of our website</p>
             </div>
         </div>
     </div>
@@ -75,13 +40,13 @@
 
     <h1 style="text-align: center;padding-top: 25px;font-size: 60px;"><span style="color: #fcc203;">Online</span> recipes</h1>
     <div class = "row" style="padding-top: 25px; margin-bottom: 40px;">
-<div class = "row" style="padding-top: 25px; margin-bottom: 40px;">
  <% recipes.forEach(function(recipe){ %>
 		<div class = "col-lg-3 col-md-6 col-sm-12">
-		<h1><%=recipe.title %></h1>
-		<img style = "width:200px;border-radius:30%" src = "<%=recipe.image%>">
+		<a href = "/recipes/<%=recipe._id%>" ><h1 style="color:#2d2e27;" class = "landingtitle"><%=recipe.title %></h1></a>
+		<img class = "landingimage" src = "<%=recipe.image%>">
 		<p><%=recipe.body.substring(0, 100)%>..</p>
-			  <a href = "/recipes/<%=recipe._id%>"><button style="margin: auto;margin-bottom: 15px; display: block; width: 100px;background: black;color: white; font-family:Merienda;">More</button></a>
+			  <a href = "/recipes/<%=recipe._id%>">
+				  <button class = "less">More</button></a>
 		 </div>
 			<% }); %>
 	</div>

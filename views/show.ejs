@@ -1,11 +1,9 @@
 <%- include("partials/header") %>
 <div class = "container">
 
-<div class = "jumbotron" style="background-color:white;margin-left:110px;">
-	<img style = "width:90%;border-radius:10%;" src = "<%=foundRecipe.image%>">
+<div class = "jumbotron" style="background-color:white;">
+	<img class = "showimage" src = "<%=foundRecipe.image%>">
 </div>
-	<p><%=foundRecipe.created.toDateString() %></p>
-	<h1 style="font-size:70px;"><%= foundRecipe.title %></h1>
 	<div style="float:right;">
 		<span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
@@ -13,10 +11,12 @@
 <span class="fa fa-star"></span>
 <span class="fa fa-star"></span>
 	</div>
+	<p><%=foundRecipe.created.toDateString() %></p>
+	<h1 style="font-size:70px;color:#a9c404;"><%= foundRecipe.title %></h1>
 <p><%= foundRecipe.body %></p>
-	<p><span style="font-size:30px;">Ingredients:</span></p>
-	<p><%=foundRecipe.ingredients%></p>
-	<p><span  style="font-size:30px;">Procedure:</span></p>
+	<p><span style="font-size:30px;color:#a9c404;">Ingredients:</span></p>
+	<p ><%=foundRecipe.ingredients%></p>
+	<p><span style="font-size:30px;color:#a9c404;">Procedure:</span></p>
 	<p><%=foundRecipe.procedure%></p>
 	
 <a class = "edit" href = "/recipes/<%=foundRecipe._id%>/edit"><button  class = " btn btn-outline-warning edit"style="width:70px;">Edit</button></a>
