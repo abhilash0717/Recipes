@@ -1,12 +1,12 @@
 <%-include("partials/header")%>
-<h1>
+
+<form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST" style="text-align:center;margin-top:20px;">
+	<h1>
 	edit <%=recipe.title %>
 </h1>
-
-<form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
-	<input type = "text" name = "recipe[title]" value = "<%=recipe.title%>">
-	<input type = "text" name = "recipe[image]" value = "<%=recipe.image %>">
-	<input type = "text" name = "recipe[body]" value = "<%=recipe.body%>">
-	<button>Update</button>
+	<input style="margin-bottom:15px;border-radius:25px; border: 2px solid #fcc203; padding: 15px;  width: 350px;" type = "text" name = "recipe[title]" value = "<%=recipe.title%>"><br>
+	<input style="margin-bottom:15px;border-radius:25px; border: 2px solid #fcc203; padding: 15px;  width: 350px;" type = "text" name = "recipe[image]" value = "<%=recipe.image %>"><br>
+	<input style="margin-bottom:15px;border-radius:25px; border: 2px solid #fcc203; padding: 15px;  width: 350px;" type = "text" name = "recipe[body]" value = "<%=recipe.body%>"><br>
+	<button class = "btn btn-outline-warning">Update</button>
 	
 </form>

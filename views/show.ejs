@@ -1,15 +1,47 @@
 <%- include("partials/header") %>
-<h1>
-	<%= foundRecipe.title %>
-</h1>
-<img src = "<%=foundRecipe.image%>">
-<p><%=foundRecipe.created.toDateString() %></p>
+<div class = "container">
+
+<div class = "jumbotron" style="background-color:white;margin-left:110px;">
+	<img style = "width:90%;border-radius:10%;" src = "<%=foundRecipe.image%>">
+</div>
+	<p><%=foundRecipe.created.toDateString() %></p>
+	<h1 style="font-size:70px;"><%= foundRecipe.title %></h1>
+	<div style="float:right;">
+		<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+	</div>
 <p><%= foundRecipe.body %></p>
-<a class = "edit" href = "/recipes/<%=foundRecipe._id%>/edit"><button  style="width:70px;">Edit</button></a>
+	<p><span style="font-size:30px;">Ingredients:</span></p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+	</p>
+	<p><span  style="font-size:30px;">Procedure:</span></p>
+	<p>
+		<span  style="font-size:25px;">01.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo. Nunc consequat interdum varius sit amet mattis vulputate enim. Viverra suspendisse potenti nullam ac tortor. Velit egestas dui id ornare arcu odio ut sem nulla. Arcu cursus vitae congue mauris rhoncus aenean vel. 
+	</p>
+	<p>
+		<span  style="font-size:25px;">02.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo. Nunc consequat interdum varius sit amet mattis vulputate enim. Viverra suspendisse potenti nullam ac tortor. Velit egestas dui id ornare arcu odio ut sem nulla. Arcu cursus vitae congue mauris rhoncus aenean vel. 
+	</p>
+	<p>
+		<span  style="font-size:25px;">03.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo. Nunc consequat interdum varius sit amet mattis vulputate enim. Viverra suspendisse potenti nullam ac tortor. Velit egestas dui id ornare arcu odio ut sem nulla. Arcu cursus vitae congue mauris rhoncus aenean vel. 
+	</p>
+	<p>
+		<span  style="font-size:25px;">04.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo. Nunc consequat interdum varius sit amet mattis vulputate enim. Viverra suspendisse potenti nullam ac tortor. Velit egestas dui id ornare arcu odio ut sem nulla. Arcu cursus vitae congue mauris rhoncus aenean vel. 
+	</p>
+	<p style="margin-bottom:30px;">
+		<span  style="font-size:25px;">05.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo. Nunc consequat interdum varius sit amet mattis vulputate enim. Viverra suspendisse potenti nullam ac tortor. Velit egestas dui id ornare arcu odio ut sem nulla. Arcu cursus vitae congue mauris rhoncus aenean vel. 
+	</p>
+	
+<a class = "edit" href = "/recipes/<%=foundRecipe._id%>/edit"><button  class = " btn btn-outline-warning edit"style="width:70px;">Edit</button></a>
 
 <form action="/recipes/<%=foundRecipe._id%>?_method=DELETE" method="POST">
-	<button class = "edit">Delete</button>
+	<button class = " btn btn-outline-warning edit">Delete</button>
 </form>
+</div>
+
 
 
 

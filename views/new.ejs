@@ -1,11 +1,12 @@
-<h1>
-	this is the new form page
-</h1>
+<%- include("partials/header") %>
 
-<form action="/recipes" method="POST">
-	<input type = "text" name = "recipe[title]" placeholder = "title">
-	<input type = "text" name = "recipe[image]" placeholder = "image url">
-	<input type = "text" name = "recipe[body]" placeholder = "description">
-	<button>Submit</button>
+<form action="/recipes" method="POST" style="text-align:center;margin-top:20px;">
+	<h1>
+		New Recipe
+	</h1>
+	<input style="margin-bottom:15px;border-radius:25px; border: 2px solid #fcc203; padding: 15px;  width: 350px;" type = "text" name = "recipe[title]" placeholder = "title"><br>
+	<input style="margin-bottom:15px;border-radius:25px; border: 2px solid #fcc203; padding: 15px;  width: 350px;" type = "text" name = "recipe[image]" placeholder = "image url"><br>
+	<input style="margin-bottom:15px;border-radius:25px; border: 2px solid #fcc203; padding: 15px;  width: 350px;" type = "text" name = "recipe[body]" placeholder = "description"><br>
+	<button class = "btn btn-outline-warning">Submit</button>
 	
 </form>

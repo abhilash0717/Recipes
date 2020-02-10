@@ -12,6 +12,7 @@
 .edit{
 	float:left;
 	width:80px;
+	margin-bottom:50px;
 }
 li{
     margin-right: 30px;
@@ -100,5 +101,9 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+.checked{
+	color:yellow;
+}
   
  

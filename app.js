@@ -24,7 +24,7 @@ var Recipe = mongoose.model("Recipe", recipeSchema);
 
 //Routes
 app.get("/", function(req,res){
-	res.render("landing");
+	res.redirect("recipes");
 });
 
 // INDEX ROUTE 
